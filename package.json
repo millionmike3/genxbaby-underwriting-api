@@ -1,12 +1,15 @@
 {
   "name": "underwriting-api",
   "version": "1.0.0",
+  "type": "module",
   "main": "dist/index.js",
+
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev --transpile-only src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
+
   "dependencies": {
     "axios": "^1.7.0",
     "cors": "^2.8.5",
@@ -14,6 +17,7 @@
     "ethers": "^6.13.0",
     "express": "^4.19.0"
   },
+
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^4.17.21",
