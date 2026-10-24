@@ -1,13 +1,13 @@
 import { ethers } from "ethers";
 import { AMOY_RPC_URL, UNDERWRITING_CONTRACT_ADDRESS } from "../config/env.js";
-import abiJson from "./UnderwritingAnchor.abi.json" assert { type: "json" };
+import abiJson from "./UnderwritingAnchor.abi.json" with { type: "json" };   // <-- FIXED
 
 export function getUnderwritingContract() {
   const provider = new ethers.JsonRpcProvider(AMOY_RPC_URL);
 
   return new ethers.Contract(
     UNDERWRITING_CONTRACT_ADDRESS,
-    abiJson.abi,
+    abiJson.abi,   // <-- ethers v6 requires the array only
     provider
   );
 }
