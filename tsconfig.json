@@ -6,6 +6,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true
-  }
+  },
+  "include": ["src"]
 }
